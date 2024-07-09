@@ -1,12 +1,15 @@
-import requests
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Fetch a random joke from an API
-response = requests.get("https://official-joke-api.appspot.com/random_joke")
-joke = response.json()
+# Create a simple DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Edward'],
+        'Age': [24, 27, 22, 32, 29]}
+df = pd.DataFrame(data)
 
-print(f"Joke: {joke['setup']} - {joke['punchline']}")
+# Print the DataFrame
+print("DataFrame:")
+print(df)
 
 # Create a simple plot
 x = np.linspace(0, 10, 100)
